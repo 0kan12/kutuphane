@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin giriş sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Ekran genişliğini aşmayacak şekilde ayarlayın */
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            color: #666;
+        }
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease-in-out;
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #66afe9;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .alert {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .alert.slide-down {
+            animation: slideDown 0.5s ease forwards;
+        }
+
+        .alert.slide-up {
+            animation: slideUp 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <form id="login" action="https://kutuphane.pythonanywhere.com/login" method="POST">
+        <h5>**selam eğer kütüphane nöbetçisiysen ve şifreyi bilmiyorsan lütfen yasemin hocaya ulaş</h5>
+        <label for="isim">şifre:</label><br>
+        <input type="text" id="password" name="password"><br>
+        <input type="submit" value="Gönder">
+    </form>
+
+</body>
+</html>
